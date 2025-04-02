@@ -13,6 +13,7 @@ setwd('D:/fabio/pedido Luis funcion prueba hipotesis diferencias')
 # abrir BD
 data=read_xlsx('ejemplo.xlsx')
 
+dif_sig=function(data){
 # calculo del pvalor
 data=data%>%
   mutate(dif=por1-por2,
@@ -27,3 +28,4 @@ data=data%>%
 
 # exportar
 write_xlsx(data,'salida.xlsx')
+}
